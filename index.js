@@ -10,12 +10,23 @@ function setCart(c) {
 }
 
 function addToCart(item) {
- // write your code here
-}
+  cart.push({ itemName: item, itemPrice: Math.floor(Math.random()*100)+1 })
+  return `${item} has been added to your cart.`
+ }
 
-function viewCart() {
-  // write your code here
-}
+ //In your cart, you have bananas at $17, pancake batter at $5, and eggs at $49
+ function viewCart(){
+ 	let report = 'In your cart, you have '
+ 	for(let i=0; i< cart.length; ++i){
+ 		const currentObj = cart[i]
+ 		if(i === cart.length-1){
+ 			report += `and ${currentObj.itemName} at $${currentObj.itemPrice}`
+ 			break;
+    }
+ 		report += `${currentObj.itemName} at $${currentObj.itemPrice}, `
+  }
+ 	  return report
+ }
 
 function total() {
   // write your code here
