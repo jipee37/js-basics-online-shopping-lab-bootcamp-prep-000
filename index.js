@@ -51,11 +51,12 @@ function removeFromCart(item) {
 	return "That item is not in your cart."
 }
 
-//let priceTotal = total()
 function placeOrder(cardNumber) {
+  total()
+  let price = total()
 	if(cardNumber){
 		cart.length = 0
-		return `Your total cost is $${this.total()}, which will be charged to the card ${cardNumber}.`
+		return `Your total cost is $${price}, which will be charged to the card ${cardNumber}.`
     }
 	return "Sorry, we don't have a credit card on file for you."
 }
