@@ -14,19 +14,22 @@ function addToCart(item) {
   return `${item} has been added to your cart.`
  }
 
- //In your cart, you have bananas at $17, pancake batter at $5, and eggs at $49
- function viewCart(){
- 	let report = 'In your cart, you have '
- 	for(let i=0; i< cart.length; ++i){
- 		const currentObj = cart[i]
- 		if(i === cart.length-1){
- 			report += `and ${currentObj.itemName} at $${currentObj.itemPrice}`
- 			break;
+function viewCart(){
+  if (!cart.length) return 'Your shopping cart is empty.'
+	let report = 'In your cart, you have'
+	for(let i=0; i< cart.length; ++i){
+		const currentObj = cart[i]
+		if(i === 0) {
+			report = `${report} ${currentObj.itemName} at $${currentObj.itemPrice}.`;
     }
- 		report += `${currentObj.itemName} at $${currentObj.itemPrice}, `
-  }
- 	  return report
- }
+		if(i === cart.length-1 && i !==0){
+			report = `${report.slice(0, report.length-1)}, and ${currentObj.itemName} at $${currentObj.itemPrice}`
+			break;
+    }
+		if( i > 0) report = `, ${report.slice(0, report.length-1)}, ${currentObj.itemName} at $${currentObj.itemPrice},`
+    }
+	return report
+}
 
 function total() {
   // write your code here
