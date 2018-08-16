@@ -35,13 +35,19 @@ function total() {
   let total = 0;
   for(let i=0; i< cart.length; ++i){
     const currentObj = cart[i]
-	  total += currentObj.itemPrice	
+	  total += currentObj.itemPrice
   }
   return total
 }
 
 function removeFromCart(item) {
-  
+	for(let i=0; i< cart.length; ++i){
+    	const currentObj = cart[i] ;
+        if(currentObj.itemName === item){  
+            cart.splice(i, 1)
+        }
+    }
+	return cart
 }
 
 function placeOrder(cardNumber) {
