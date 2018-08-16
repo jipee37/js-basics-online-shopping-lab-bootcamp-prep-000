@@ -23,7 +23,7 @@ function viewCart(){
 			report = `${report} ${currentObj.itemName} at $${currentObj.itemPrice}.`;
     }
 		if(i === cart.length-1 && i !==0){
-			report = `${report.slice(0, report.length-1)}, and ${currentObj.itemName} at $${currentObj.itemPrice}`
+			report = `${report.slice(0, report.length-1)}, and ${currentObj.itemName} at $${currentObj.itemPrice}.`
 			break;
     }
 		if( i > 0) report = `, ${report.slice(0, report.length-1)}, ${currentObj.itemName} at $${currentObj.itemPrice},`
