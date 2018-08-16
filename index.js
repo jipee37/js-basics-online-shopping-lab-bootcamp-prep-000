@@ -52,7 +52,6 @@ function removeFromCart(item) {
 }
 
 function placeOrder(cardNumber) {
-  //total()
   let price = total()
 	if(cardNumber){
 		cart.length = 0
