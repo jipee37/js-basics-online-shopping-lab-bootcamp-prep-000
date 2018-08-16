@@ -43,14 +43,14 @@ function total() {
 function removeFromCart(item) {
 	for(let i=0; i< cart.length; ++i){
     	const currentObj = cart[i] ;
-        if(currentObj.itemName === item){  
+        if(currentObj.itemName === item){
             cart.splice(i, 1) //destructif
 			      return cart
-        } 
+        }
     }
 	return "That item is not in your cart."
 }
 
 function placeOrder(cardNumber) {
-  
+
 }
