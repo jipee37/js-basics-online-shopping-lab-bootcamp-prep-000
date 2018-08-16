@@ -51,7 +51,7 @@ function removeFromCart(item) {
 	return "That item is not in your cart."
 }
 
-priceTotal = total()
+//let priceTotal = total()
 function placeOrder(cardNumber) {
 	if(cardNumber){
 		cart.length = 0
