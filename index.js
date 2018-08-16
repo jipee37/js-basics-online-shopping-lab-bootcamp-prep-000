@@ -32,14 +32,16 @@ function viewCart(){
 }
 
 function total() {
-  for(var i=0; i< cart.length; ++i){
+  let total = 0;
+  for(let i=0; i< cart.length; ++i){
     const currentObj = cart[i]
-    }
-  return i
+	  total += currentObj.itemPrice	
+  }
+  return total
 }
 
 function removeFromCart(item) {
-  // write your code here
+  
 }
 
 function placeOrder(cardNumber) {
